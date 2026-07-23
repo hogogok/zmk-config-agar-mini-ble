@@ -14,26 +14,9 @@
     combos {
         compatible = "zmk,combos";
 
-        qw {
-            bindings = <&kp EXCL>;
-            key-positions = <1 2>;
-        };
-
-        we {
-            bindings = <&kt AT>;
-            key-positions = <2 3>;
-        };
-    };
-
-    behaviors {
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp ESCAPE>, <&kp TAB>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
         };
     };
 
@@ -42,10 +25,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE     &kp Q         &kp W     &kp E  &kp R        &kp T  &kp Y      &kp U  &kp I      &kp O            &kp P      &kp DEL     &kp BSPC
-&mt LCTRL TAB  &kp A         &kp S     &kp D  &kp F        &kp G  &kp H      &kp J  &kp K      &kp L            &kp SEMI   &kp RET
-&kp LSHFT      &kp Z         &kp X     &kp C  &kp V        &kp B  &kp N      &kp M  &kp COMMA  &kp DOT          &kp SLASH  &kp RSHIFT
-               &kp LEFT_GUI  &kp LALT         &lt 1 SPACE         &kp SPACE                    &lt 2 RIGHT_ALT  &mo 3
+&kp TAB    &kp Q         &kp W     &kp E  &kp R        &kp T  &kp Y      &kp U  &kp I      &kp O            &kp P      &kp DEL     &kp BSPC
+&kp LCTRL  &kp A         &kp S     &kp D  &kp F        &kp G  &kp H      &kp J  &kp K      &kp L            &kp SEMI   &kp RET
+&kp LSHFT  &kp Z         &kp X     &kp C  &kp V        &kp B  &kp N      &kp M  &kp COMMA  &kp DOT          &kp SLASH  &kp RSHIFT
+           &kp LEFT_GUI  &kp LALT         &lt 1 SPACE         &kp SPACE                    &lt 2 RIGHT_ALT  &mo 3
             >;
         };
 
@@ -60,10 +43,10 @@
 
         rightalt {
             bindings = <
-&kp CAPSLOCK  &kp PRINTSCREEN  &kp F2          &kp HOME  &kp F2     &trans  &trans  &trans  &trans  &trans          &kp UP_ARROW    &kp RIGHT  &trans
-&trans        &kp DELETE       &kp PAGE_DOWN   &kp END   &kp F2     &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &trans
-&trans        &kp PAUSE_BREAK  &kp SCROLLLOCK  &kp F4    &kp LG(V)  &trans  &trans  &trans  &trans  &trans          &trans          &trans
-              &trans           &trans                    &trans             &trans                  &trans          &kp RCTRL
+&trans  &kp PRINTSCREEN  &kp F2          &kp HOME  &kp F2     &trans  &trans  &trans  &trans  &trans          &kp UP_ARROW    &kp RIGHT  &trans
+&trans  &kp DELETE       &kp PAGE_DOWN   &kp END   &kp F2     &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &trans
+&trans  &kp PAUSE_BREAK  &kp SCROLLLOCK  &kp F4    &kp LG(V)  &trans  &trans  &trans  &trans  &trans          &trans          &trans
+        &trans           &trans                    &trans             &trans                  &trans          &kp RCTRL
             >;
         };
 
