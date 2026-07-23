@@ -20,8 +20,8 @@
         };
 
         we {
-            bindings = <&kp AT>;
-            key-positions = <2 2 3>;
+            bindings = <&kt AT>;
+            key-positions = <2 3>;
         };
     };
 
@@ -33,15 +33,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-        };
-
-        new_behavior2: new_behavior2 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NEW_BEHAVIOR2";
-            bindings = <&kp ESCAPE>, <&kp TILDE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_LALT)>;
         };
     };
 
