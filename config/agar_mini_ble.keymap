@@ -35,9 +35,9 @@
             mods = <(MOD_LALT)>;
         };
 
-        new_behavior: new_behavior {
+        new_behavior2: new_behavior2 {
             compatible = "zmk,behavior-mod-morph";
-            label = "NEW_BEHAVIOR";
+            label = "NEW_BEHAVIOR2";
             bindings = <&kp ESCAPE>, <&kp TILDE>;
 
             #binding-cells = <0>;
